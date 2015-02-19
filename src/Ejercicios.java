@@ -7,6 +7,8 @@ public class Ejercicios
 			return true;
 		else
 		return false;
+		//si el resultado del operador es totalmente igual a cero retorna verdadero(Par)
+		//De los contrario es falso (impar)
 	}
 	
 	//devuelve "gratis" si lempiras es igual a 0
@@ -23,12 +25,16 @@ public class Ejercicios
 		else if(lempiras<200)
 		return "normal";
 		return "caro";
+		//primer operador si es totalmente igual a cero es gratis
+		//menor que 100 es barato
+		//menor que 100 normal, de lo contrario es caro
 	}
 	
 	//devuelve el factorial de "num"
 	//repaso de la serie factorial http://mathworld.wolfram.com/Factorial.html
 	static int factorial(int num)
 	{
+		//La condicion que hace que se detenga la recursividad es cuando num==0
 		if(num==0)
 			return 1;
 		else
@@ -39,11 +45,13 @@ public class Ejercicios
 	static int getElemento(int arr[],int pos)
 	{
 		return arr[pos];
+		//Retornara el arreglo arr en la posicion de pos
 	}
 	
 	//devuelve el elemento de "arr" en la posicion ["col"] ["fila"]
 	static int getElemento(int arr[][],int col,int fila)
 	{
+		//retornara el arreblo bidimencional en la columna posicion col y fila en la posicion fila
 		return arr[col][fila];
 	}
 	
@@ -76,7 +84,7 @@ public class Ejercicios
 			else if(num==1)
 				return 1;
 			else
-				return fibonacci(num-1)+fibonacci(num-2);
+				return fibonacci(num-1)+fibonacci(num-2); //Formula recursiva
 	}
 	
 	//realizar la siguiente funcion recursiva:
